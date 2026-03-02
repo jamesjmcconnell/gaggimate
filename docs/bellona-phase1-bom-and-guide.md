@@ -85,6 +85,42 @@ Public documentation does **not** conclusively expose all retrofit-critical inte
 - Existing safety chain wiring order (thermal fuse/over-temp cutout/pressure safety components).
 - Switch logic polarity and whether any controls are latched/interlocked.
 
+
+## 1.4 1st-line parts diagram research findings (Version 1 Bellona)
+
+Using the 1st-line Bellezza Bellona parts-diagram page, the following additional facts were confirmed:
+
+- The page is explicitly marked for **Version 1 Bellona** and references **COD. 9942072 REV. 00 ed.08/21**.
+- The diagram set includes **10 exploded assemblies** with numbered callouts and SKU tables.
+- The assemblies and callout ranges shown are:
+  - `1..26` (`BE.001.xxx` + `IN/ZB` parts)
+  - `8.1..8.21` (`BE.008.xxx` subset)
+  - `27..46` (`BE.003.xxx`)
+  - `47..59` (`BE.004.xxx` + `IN` parts)
+  - `60.1..60.14` (`BE.360.xxx`)
+  - `63..91` (`BE.040.xxx`)
+  - `70.1..70.7` (`BE.470.xxx` valve sub-assembly)
+  - `74.1..74.20` (`BE.074/IN.076` cylindrical sub-assembly)
+  - `90.1..90.13` (`BE.090.xxx`)
+  - `92..105` (`BE.005.xxx` + `ZB.200.xxx`)
+- The exploded image metadata indicates specific subsystem types are present, including:
+  - **control panel / keyboard + circuit boards + connectors**,
+  - **valve assemblies**,
+  - **mechanical subassemblies with fittings/pipes/springs**,
+  - a **full machine assembly drawing** with tanks, valves, and electrical connectors.
+
+Source used:
+- 1st-line technical page: https://www.1st-line.com/technical-support/bellezza-technical-support/parts-diagram-bellezza-bellona/
+
+### 1.5 Research impact: what this narrows down
+
+This diagram research materially narrows the retrofit unknowns:
+
+- **R3 wiring diagram scope is now bounded** to the callout groups above, so each measured wire/sensor can be indexed to a callout and SKU family.
+- **R1 sensor report can focus first** on assemblies associated with control panel/electronics and cylindrical fluid/thermal blocks (likely sensor hosts).
+- **R2 load sizing can focus first** on actuator-related groups (`BE.360`, `BE.470`, `BE.074`) that are explicitly represented as valve/mechanical subassemblies.
+- **R4 interlock matrix can map outputs** to the explicit panel + valve + actuator assembly boundaries exposed by the exploded diagrams.
+
 ---
 
 ## 2) Phase 1 BOM (baseline)
