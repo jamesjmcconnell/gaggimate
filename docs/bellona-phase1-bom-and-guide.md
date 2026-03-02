@@ -51,6 +51,40 @@ Before moving forward, complete and archive this machine-specific research. **Do
 
 If any R1–R5 artifact is missing, treat the project as **blocked**.
 
+
+## 1.2 Bellona baseline research findings (completed from public sources)
+
+The following data has been extracted from the official Bellezza Bellona product/specification page and should be treated as the current baseline:
+
+- Machine type: **Dualboiler** (independent brew + steam circuits).
+- Pump type: **Silent vibration**, approx. **40 l/h** flow.
+- Valve: **Rotary valve**.
+- Control: **PID control = Yes**.
+- Water tank: **1.8 L**.
+- Boiler material: **Stainless steel**.
+- Boiler volume: **500 ml brew boiler + 1 L steam boiler**.
+- Pump pressure gauge: **Yes**.
+- Weight: **23 kg**.
+- Supply voltage: **220 V / 120 V**.
+- Frequency: **50/60 Hz**.
+- Energy absorption: **2000 W**.
+
+Source used:
+- Official Bellona product page: https://bellezzaespresso.com/espresso-machines/bellona
+- Bellona manuals listed by manufacturer:
+  - https://bellezzaespresso.com/wp-content/uploads/Manual_Bellona_EN_GE_Australia_Saudi_Europe-EN.pdf
+  - https://bellezzaespresso.com/wp-content/uploads/Manual_Bellona_US-EN.pdf
+
+### 1.3 Research gaps still requiring on-machine validation
+
+Public documentation does **not** conclusively expose all retrofit-critical internals. These must be measured directly on your unit before finalizing electrical integration:
+
+- Exact brew/steam sensor technology and wiring (NTC/PT100/PT1000/thermocouple).
+- Exact heater element resistance/current split between brew and steam circuits.
+- Pump and solenoid startup current (inrush) and switch-side orientation in the stock harness.
+- Existing safety chain wiring order (thermal fuse/over-temp cutout/pressure safety components).
+- Switch logic polarity and whether any controls are latched/interlocked.
+
 ---
 
 ## 2) Phase 1 BOM (baseline)
